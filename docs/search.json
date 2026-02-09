@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "Day 3 Prac Q4 and Q5.html",
+    "href": "Day 3 Prac Q4 and Q5.html",
+    "title": "Day 3 Prac Q4 and Q5",
+    "section": "",
+    "text": "#sin(x) plot\n\n#|echo: true\n\nx &lt;- (-20:20)/10\ny = sin(x)\n\nplot(x, y, col=\"red\", xlab = \"x\", ylab = \"sin(x)\", main = \"The sin(x) graph with x ranging from -2 to 2\")"
+  },
+  {
+    "objectID": "Prac 1.html",
+    "href": "Prac 1.html",
+    "title": "Prac 1",
+    "section": "",
+    "text": "#Finding all rows with missing data\n\n#|echo: true\n\nrows_incomplete &lt;- c()\n\nfor (i in 1:nrow(airquality)){\n  if (any(is.na(airquality[i,]))){\n    rows_incomplete &lt;- c(rows_incomplete,i)}}\n    \nprint(rows_incomplete)\n\n [1]   5   6  10  11  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52\n[20]  53  54  55  56  57  58  59  60  61  65  72  75  83  84  96  97  98 102 103\n[39] 107 115 119 150\n\n\n#Calculate mean, sd, min, max for temperature and ozone level\n\n#|echo: true\n\n##Temperature statistics\n(mean_temp = mean(airquality$Temp, na.rm = TRUE ))\n\n[1] 77.88235\n\n(sd_temp = sd(airquality$Temp, na.rm = TRUE))\n\n[1] 9.46527\n\n(min_temp = min(airquality$Temp, na.rm = TRUE))\n\n[1] 56\n\n(max_temp = max(airquality$Temp, na.rm = TRUE))\n\n[1] 97\n\n##Ozone statistics\n(mean_temp = mean(airquality$Ozone, na.rm = TRUE ))\n\n[1] 42.12931\n\n(sd_temp = sd(airquality$Ozone, na.rm = TRUE))\n\n[1] 32.98788\n\n(min_temp = min(airquality$Ozone, na.rm = TRUE))\n\n[1] 1\n\n(max_temp = max(airquality$Ozone, na.rm = TRUE))\n\n[1] 168\n\n\n#Fitting a linear regression to the cars dataset\n\n#|echo: true\nlm(cars$speed ~ cars$dist)\n\n\nCall:\nlm(formula = cars$speed ~ cars$dist)\n\nCoefficients:\n(Intercept)    cars$dist  \n     8.2839       0.1656"
+  }
+]

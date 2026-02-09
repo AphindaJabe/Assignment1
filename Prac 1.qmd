@@ -1,0 +1,45 @@
+---
+title: "Prac 1"
+format: html
+Author: Aphinda Jabe
+---
+
+#Finding all rows with missing data
+
+```{r}
+#|echo: true
+
+rows_incomplete <- c()
+
+for (i in 1:nrow(airquality)){
+  if (any(is.na(airquality[i,]))){
+    rows_incomplete <- c(rows_incomplete,i)}}
+    
+print(rows_incomplete)
+
+```
+
+#Calculate mean, sd, min, max for temperature and ozone level
+
+```{r}
+#|echo: true
+
+##Temperature statistics
+(mean_temp = mean(airquality$Temp, na.rm = TRUE ))
+(sd_temp = sd(airquality$Temp, na.rm = TRUE))
+(min_temp = min(airquality$Temp, na.rm = TRUE))
+(max_temp = max(airquality$Temp, na.rm = TRUE))
+
+##Ozone statistics
+(mean_temp = mean(airquality$Ozone, na.rm = TRUE ))
+(sd_temp = sd(airquality$Ozone, na.rm = TRUE))
+(min_temp = min(airquality$Ozone, na.rm = TRUE))
+(max_temp = max(airquality$Ozone, na.rm = TRUE))
+```
+
+#Fitting a linear regression to the cars dataset
+
+```{r}
+#|echo: true
+lm(cars$speed ~ cars$dist)
+```

@@ -1,0 +1,15 @@
+---
+title: "Day 3 Prac Q4 and Q5"
+format: html
+---
+
+#sin(x) plot
+
+```{r}
+#|echo: true
+
+x <- (-20:20)/10
+y = sin(x)
+
+plot(x, y, col="red", xlab = "x", ylab = "sin(x)", main = "The sin(x) graph with x ranging from -2 to 2")
+```

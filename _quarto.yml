@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: "docs"
+
+website:
+  title: "Assignment 1"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Prac 1"
+        file: Prac 1.qmd
+      - text: "Day 3 Prac Q4 and Q5"
+        file: Day 3 Prac Q4 and Q5.qmd
+      - text: "Prac 4"
+        file: Prac 4.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+
